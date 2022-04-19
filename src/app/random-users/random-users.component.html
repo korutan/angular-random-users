@@ -1,0 +1,30 @@
+
+<mat-toolbar color="primary">
+  <div class="container">
+    <span>Random Users</span>
+    <div style="margin-left: 20px">
+      <button [disabled]="buttonLoading" style="margin-right: 30px" mat-raised-button (click)="newUsers()">Adicione 10 usuários</button>
+      <button [disabled]="buttonLoading"  mat-raised-button (click)="deleteUsers()">Remova 10 usuários</button>
+    </div>
+    <div>
+      <span style="margin-left: 30px;font-size: 30px;font-family: 'Arial Black'">Temos {{users.length}} Usuarios na tela</span>
+    </div>
+  </div>
+</mat-toolbar>
+
+<mat-spinner class="spinner" *ngIf="showSpinner"></mat-spinner>
+
+<div  class="container">
+  <div  class="content"  *ngFor="let user of users; let index = index">
+    <mat-card style="width: 10em !important;">
+      <div class="container">
+        <img style="text-align: center" [src]=" user.picture.large ">
+        <mat-card-content style="margin-top: 10px !important;">
+          <span>{{user.name.first}} {{user.name.last}}</span>
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+
