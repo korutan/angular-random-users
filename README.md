@@ -1,6 +1,6 @@
 <h2 align="center">welcome to angular random user card generator </h2>
 
-git clone: https://github.com/korutan/random-users-angular.git
+git clone: https://github.com/korutan/angular-random-users.git
 
 Run : npm install and after run ng serve.
 
